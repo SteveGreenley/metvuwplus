@@ -1,0 +1,241 @@
+/* MetVUW Plus — injected styles */
+
+/* Selected thumbnail highlight */
+.mvp-selected {
+  outline: 3px solid #00e5ff !important;
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== LIGHTBOX ===== */
+#mvp-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+}
+
+#mvp-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+#mvp-lightbox-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 96vw;
+  max-height: 96vh;
+}
+
+#mvp-lightbox-img-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#mvp-lightbox-img {
+  display: none;
+  max-width: 85vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border: 1px solid #333;
+}
+
+.mvp-radar-mode #mvp-lightbox-img {
+  height: 78vh;
+  width: auto;
+  max-width: 78vh; /* images are square */
+  max-height: 78vh;
+}
+
+#mvp-lightbox-scale {
+  display: none;
+  width: auto;
+  border: 1px solid #333;
+  flex-shrink: 0;
+}
+
+#mvp-lightbox-img-frame {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  min-height: 150px;
+}
+
+#mvp-lightbox-error {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 0, 0, 0.75);
+  color: #ff6b6b;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border: 1px solid #551111;
+}
+
+#mvp-lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1;
+  padding: 0;
+}
+#mvp-lightbox-close:hover { background: #333; color: #fff; }
+
+#mvp-lightbox-prev,
+#mvp-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #555;
+  color: #ccc;
+  font-size: 32px;
+  width: 44px;
+  height: 64px;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1;
+  padding: 0;
+  z-index: 2;
+}
+#mvp-lightbox-prev { left: -52px; }
+#mvp-lightbox-next { right: -52px; }
+#mvp-lightbox-prev:hover,
+#mvp-lightbox-next:hover { background: rgba(0, 229, 255, 0.2); color: #fff; border-color: #00e5ff; }
+
+#mvp-lightbox-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 30, 0.85);
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #ddd;
+  max-width: 92vw;
+}
+
+#mvp-lightbox-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+#mvp-lightbox-frame-label {
+  color: #ffdd88;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#mvp-lightbox-progress-bar {
+  display: flex;
+  gap: 2px;
+  height: 24px;
+}
+
+.mvp-progress-seg {
+  flex: 1;
+  min-width: 3px;
+  background: #1e1e3a;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.08s;
+}
+
+.mvp-progress-seg.mvp-progress-past {
+  background: #2a4060;
+}
+
+.mvp-progress-seg.mvp-progress-active {
+  background: #00e5ff;
+  border-radius: 2px;
+}
+
+.mvp-progress-seg:hover {
+  background: #5599bb;
+}
+
+.mvp-progress-seg.mvp-progress-active:hover {
+  background: #66eeff;
+}
+
+#mvp-lightbox-play,
+#mvp-lightbox-slower,
+#mvp-lightbox-faster {
+  background: #1a1a2e;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 3px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 12px;
+}
+#mvp-lightbox-play:hover,
+#mvp-lightbox-slower:hover,
+#mvp-lightbox-faster:hover {
+  background: #252545;
+  color: #fff;
+  border-color: #00e5ff;
+}
+#mvp-lightbox-play { min-width: 74px; }
+
+#mvp-lightbox-speed-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#mvp-lightbox-speed-label {
+  color: #88aaff;
+  font-size: 12px;
+  width: 46px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ===== SAVE PREFS BUTTON ===== */
+#mvp-save-prefs {
+  position: fixed;
+  bottom: 12px;
+  right: 16px;
+  z-index: 9999;
+  background: #1a1a2e;
+  border: 1px solid #555;
+  color: #aaa;
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+#mvp-save-prefs:hover {
+  background: #252545;
+  color: #ffdd88;
+  border-color: #ffdd88;
+}

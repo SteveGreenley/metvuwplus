@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:metvuw.co.nz)",
+      "Bash(curl -s \"https://metvuw.co.nz/satellite/\")",
+      "Bash(curl -s \"https://metvuw.co.nz/radar/\")",
+      "Bash(curl -s \"https://metvuw.co.nz/satellite/satellite.php?ihour=0\")",
+      "Bash(curl -s \"https://metvuw.co.nz/radar/radar.php?location=nz\")"
+    ]
+  }
+}

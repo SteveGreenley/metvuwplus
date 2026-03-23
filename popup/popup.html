@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MetVUW Plus</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <span class="logo">⛅</span>
+    <h1>MetVUW Plus</h1>
+  </div>
+
+  <section class="section">
+    <h2>Default View</h2>
+    <p class="hint">When enabled, you'll be redirected to your preferred view automatically.</p>
+
+    <div class="field">
+      <label for="sel-region">Region</label>
+      <select id="sel-region">
+        <option value="nz">New Zealand</option>
+        <option value="nzni">North Island</option>
+        <option value="nzsi">South Island</option>
+        <option value="ncal">New Caledonia</option>
+        <option value="fiji">Fiji</option>
+        <option value="swpac">SW Pacific</option>
+        <option value="spac">S Pacific</option>
+        <option value="pac">Pacific Islands</option>
+        <option value="samoa">Samoa</option>
+        <option value="tonga">Tonga</option>
+        <option value="cook">Cook Islands</option>
+        <option value="tahiti">Tahiti</option>
+        <option value="hawaii">Hawaii</option>
+        <option value="perth">Perth WA</option>
+        <option value="wa">Western Australia</option>
+        <option value="sa">South Australia</option>
+        <option value="seau">SE Australia</option>
+        <option value="qld">Queensland</option>
+        <option value="nsw">NSW</option>
+        <option value="vic">Victoria/Tasmania</option>
+        <option value="world">World</option>
+        <option value="europe">Europe</option>
+        <option value="uk">UK</option>
+        <option value="japan">Japan</option>
+        <option value="usa">USA</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="sel-type">Forecast Type</label>
+      <select id="sel-type">
+        <option value="rain">Rain</option>
+        <option value="wind1000">Wind 1000mb</option>
+        <option value="wind850">Wind 850mb</option>
+        <option value="wind700">Wind 700mb</option>
+        <option value="wind500">Wind 500mb</option>
+        <option value="wind300">Wind 300mb</option>
+        <option value="wind250">Wind 250mb</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="sel-days">Days</label>
+      <select id="sel-days">
+        <option value="1">1 day</option>
+        <option value="3">3 days</option>
+        <option value="4">4 days</option>
+        <option value="5">5 days</option>
+        <option value="6">6 days</option>
+        <option value="7">7 days</option>
+        <option value="8">8 days</option>
+        <option value="10">10 days</option>
+      </select>
+    </div>
+
+    <div class="field checkbox-field">
+      <input type="checkbox" id="chk-enabled" />
+      <label for="chk-enabled">Auto-redirect to default view</label>
+    </div>
+
+    <div class="buttons">
+      <button id="btn-save" class="btn-primary">Save</button>
+      <button id="btn-clear" class="btn-secondary">Clear</button>
+    </div>
+
+    <div id="status" class="status"></div>
+  </section>
+
+  <section class="section shortcuts">
+    <h2>Keyboard Shortcuts</h2>
+    <table>
+      <tr><td>← →</td><td>Step through time steps</td></tr>
+      <tr><td>↑ ↓</td><td>Switch forecast type</td></tr>
+      <tr><td>Shift+↑/↓</td><td>Switch region</td></tr>
+      <tr><td>Enter</td><td>Open lightbox</td></tr>
+      <tr><td>Esc</td><td>Close lightbox</td></tr>
+      <tr><td>Space</td><td>Play/Pause (lightbox)</td></tr>
+      <tr><td>P</td><td>Play/Pause (page)</td></tr>
+      <tr><td>+ / −</td><td>Faster / Slower</td></tr>
+    </table>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
