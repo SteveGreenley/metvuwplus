@@ -2,7 +2,8 @@
   "manifest_version": 3,
   "name": "MetVUW Plus",
   "version": "1.0.0",
-  "description": "Usability enhancements for metvuw.co.nz weather forecasts: keyboard navigation, image lightbox, slideshow, and saved preferences.",
+  "minimum_chrome_version": "88",
+  "description": "Enhances metvuw.co.nz with a lightbox viewer, animated slideshow, scrub bar, keyboard navigation, and saved preferences — for forecast, satellite, and radar pages.",
   "permissions": ["storage"],
   "host_permissions": ["*://metvuw.co.nz/*"],
   "content_scripts": [

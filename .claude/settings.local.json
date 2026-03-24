@@ -5,7 +5,13 @@
       "Bash(curl -s \"https://metvuw.co.nz/satellite/\")",
       "Bash(curl -s \"https://metvuw.co.nz/radar/\")",
       "Bash(curl -s \"https://metvuw.co.nz/satellite/satellite.php?ihour=0\")",
-      "Bash(curl -s \"https://metvuw.co.nz/radar/radar.php?location=nz\")"
+      "Bash(curl -s \"https://metvuw.co.nz/radar/radar.php?location=nz\")",
+      "WebFetch(domain:images.all-free-download.com)",
+      "Bash(python3 -c \"import PIL; print\\(''Pillow available''\\)\")",
+      "Bash(python3 -c \"import cairosvg; print\\(''cairosvg available''\\)\")",
+      "Bash(python3:*)",
+      "Bash(zip -r store-assets/metvuwplus-1.0.0.zip manifest.json content/ popup/ icons/ --exclude \"*.DS_Store\")",
+      "Bash(unzip -l store-assets/metvuwplus-1.0.0.zip)"
     ]
   }
 }
