@@ -11,7 +11,9 @@
       "Bash(python3 -c \"import cairosvg; print\\(''cairosvg available''\\)\")",
       "Bash(python3:*)",
       "Bash(zip -r store-assets/metvuwplus-1.0.0.zip manifest.json content/ popup/ icons/ --exclude \"*.DS_Store\")",
-      "Bash(unzip -l store-assets/metvuwplus-1.0.0.zip)"
+      "Bash(unzip -l store-assets/metvuwplus-1.0.0.zip)",
+      "Bash(chmod +x /Users/steveg/Sandbox/metvuwplus/package.sh)",
+      "Bash(./package.sh)"
     ]
   }
 }
